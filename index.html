@@ -85,25 +85,9 @@ e.preventDefault();
 		</div>
 <footer>
 </footer>
-<section id="videos">
-            <video preload="none" loop="" >
-                <source type="video/mp4" src="img/background.mp4">
-            </video>
-        </section>
-        <script>
-            (function () {
-                "use strict";
-                var videosSection = document.getElementById("videos");
-                var videosSectionClone = videosSection.cloneNode();
-                var videos = videosSection.getElementsByTagName("video");
-                var randomVideo = videos.item(Math.floor(Math.random() * videos.length)).cloneNode(true);
-                randomVideo.removeAttribute("controls");
-                randomVideo.setAttribute("preload", "auto");
-                videosSectionClone.appendChild(randomVideo);
-                videosSection.parentNode.replaceChild(videosSectionClone, videosSection);
-                randomVideo.play();
-            })();
-        </script>   	
+<video autoplay loop id="player" controls>
+<source src="./img/background.mp4" type="video/mp4">
+</video>   	
 <script>
 var x = document.getElementById("player").volume = 0.5;
 	</script>
